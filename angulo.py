@@ -11,7 +11,7 @@ Yt = 1 # Y position
 Vt = 10 # Target tank speed
 
 # Projectile data
-Vp = 20 # Speed
+Vp = 20 # Projectile speed
 
 # Shot solution calculation
 alpha = math.degrees(math.atan((Xt-Xo)/(Yt-Yo)))
