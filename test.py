@@ -16,6 +16,6 @@ Vp = 20 # Projectile speed
 # If you want or not the function to print msgs
 prnt = True
 
-a = angle.angle_calc(Xt,Xo,Yt,Yo,Vt,Vp,prnt)
+a = angle.shot_angle_calc(Xt,Xo,Yt,Yo,Vt,Vp,prnt)
 msg = 'Calculated shot angle = ' + str(a)
 print(msg)

@@ -1,6 +1,6 @@
 import math
 
-def angle_calc(Xt,Xo,Yt,Yo,Vt,Vp,prnt):
+def shot_angle_calc(Xt,Xo,Yt,Yo,Vt,Vp,prnt):
     # Shot solution calculation
     alpha = math.degrees(math.atan((Xt-Xo)/(Yt-Yo)))
     theta = math.degrees(math.asin(Vt/Vp))
