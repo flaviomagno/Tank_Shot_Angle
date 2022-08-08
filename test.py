@@ -1,4 +1,4 @@
-import math
+import angle
 
 # Test data
 # Origin tank data
@@ -13,11 +13,9 @@ Vt = 10 # Target tank speed
 # Projectile data
 Vp = 20 # Projectile speed
 
-# Shot solution calculation
-alpha = math.degrees(math.atan((Xt-Xo)/(Yt-Yo)))
-theta = math.degrees(math.asin(Vt/Vp))
-angle = 90 - alpha - theta
+# If you want or not the function to print msgs
+prnt = True
 
-print(alpha)
-print(theta)
-print(angle)
+a = angle.angle_calc(Xt,Xo,Yt,Yo,Vt,Vp,prnt)
+msg = 'Calculated shot angle = ' + str(a)
+print(msg)
