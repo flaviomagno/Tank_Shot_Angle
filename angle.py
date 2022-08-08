@@ -4,9 +4,18 @@ def shot_angle_calc(Xt,Xo,Yt,Yo,Vt,Vp,prnt):
     # Shot solution calculation
     alpha = math.degrees(math.atan((Xt-Xo)/(Yt-Yo)))
     theta = math.degrees(math.asin(Vt/Vp))
+
+    # get aprox value
+    alpha = get_aprox_value(alpha)
+    theta = get_aprox_value(theta)
     angle = 90 - alpha - theta
 
     if prnt:
+        line = '_____________________________________________________________________________________'
+        print(line)
+        print('Input vars')
+        print(line)
+        
         msg = 'Origin tank X position = ' + str(Xo)
         print(msg)
 
@@ -30,8 +39,16 @@ def shot_angle_calc(Xt,Xo,Yt,Yo,Vt,Vp,prnt):
 
         msg = 'Angle between target orthogonal direction and projectile direction = ' + str(theta)
         print(msg)
+        print(line)
 
-        msg = 'Angle between projectile direction and X axis = ' + str(angle)
+        msg = 'Calculated angle between projectile direction and X axis = ' + str(angle)
         print(msg)
+        print(line)
 
     return angle
+
+def get_aprox_value(value):
+    doubleValue = value * 1000
+    invValue = int(doubleValue)
+    result = invValue / 1000
+    return result
