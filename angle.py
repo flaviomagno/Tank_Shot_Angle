@@ -48,6 +48,7 @@ def shot_angle_calc(Xt,Xo,Yt,Yo,Vt,Vp,prnt):
     return angle
 
 def get_aprox_value(value):
+    # aproximate by .000
     doubleValue = value * 1000
     invValue = int(doubleValue)
     result = invValue / 1000
